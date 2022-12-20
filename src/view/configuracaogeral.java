@@ -52,6 +52,7 @@ public class configuracaogeral extends javax.swing.JFrame {
         jLabel1.setText("Instrucoes gerais para o teste");
 
         salvar.setText("salvar teste");
+        salvar.setToolTipText("começar teste");
         salvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 salvarActionPerformed(evt);

@@ -8,10 +8,12 @@ import com.jtattoo.plaf.smart.*;
 import java.util.Properties;
 import javax.swing.UIManager;
 import perceptiontest.Teste;
+
 /**
  *
  * @author renatarodriguespintos
  */
+
 public class menu extends javax.swing.JFrame {
  public static menu app = null;
      public static Teste meuteste;
@@ -38,60 +40,82 @@ public class menu extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("menu");
+        setBackground(new java.awt.Color(0, 0, 0));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        jButton1.setText("config");
+        jButton1.setBackground(new java.awt.Color(244, 242, 232));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/definicoes.png"))); // NOI18N
+        jButton1.setToolTipText("configurar testes");
+        jButton1.setBorder(null);
+        jButton1.setBorderPainted(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setText("comecar teste");
+        jButton3.setText("sobre este software");
+
+        jButton2.setBackground(new java.awt.Color(244, 242, 232));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/toque.png"))); // NOI18N
+        jButton2.setToolTipText("começar teste");
+        jButton2.setAutoscrolls(true);
+        jButton2.setBorder(null);
+        jButton2.setBorderPainted(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
 
-        jButton3.setText("nao sei ainda");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(98, 98, 98)
-                .addComponent(jButton2)
-                .addGap(74, 74, 74)
-                .addComponent(jButton1)
-                .addGap(63, 63, 63)
-                .addComponent(jButton3)
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(273, 273, 273)
+                        .addComponent(jButton2)
+                        .addGap(101, 101, 101)
+                        .addComponent(jButton1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(379, 379, 379)
+                        .addComponent(jButton3)))
+                .addContainerGap(273, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(159, 159, 159)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(188, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton2)
-                    .addComponent(jButton3)
                     .addComponent(jButton1))
-                .addContainerGap(229, Short.MAX_VALUE))
+                .addGap(62, 62, 62)
+                .addComponent(jButton3)
+                .addGap(147, 147, 147))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+        
+     
+    
+    
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+         jButton2.setToolTipText("iniciar teste"); 
+
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        jButton1.setToolTipText("configurar testes");
+        
         configtestes testes = new configtestes();
         testes.setLocationRelativeTo(null);
         testes.setVisible(true);
@@ -159,6 +183,7 @@ public class menu extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new menu().setVisible(true);
+               
             }
         });
     }

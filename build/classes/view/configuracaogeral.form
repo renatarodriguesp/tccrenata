@@ -75,6 +75,7 @@
     <Component class="javax.swing.JButton" name="salvar">
       <Properties>
         <Property name="text" type="java.lang.String" value="salvar teste"/>
+        <Property name="toolTipText" type="java.lang.String" value="come&#xe7;ar teste"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="salvarActionPerformed"/>
