@@ -33,8 +33,7 @@ public static configtestes app = null;
 
         bgaluno = new javax.swing.ButtonGroup();
         configgeral = new javax.swing.JButton();
-        editarid = new javax.swing.JButton();
-        editdisc = new javax.swing.JButton();
+        editartestes = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
@@ -43,31 +42,23 @@ public static configtestes app = null;
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         configgeral.setFont(new java.awt.Font("Rockwell", 0, 18)); // NOI18N
+        configgeral.setText("confuguracao geral da avaliacao ");
         configgeral.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        configgeral.setLabel("Configuração Geral");
         configgeral.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 configgeralActionPerformed(evt);
             }
         });
 
-        editarid.setFont(new java.awt.Font("Rockwell", 0, 18)); // NOI18N
-        editarid.setText("editar testes de identificacao ");
-        editarid.addActionListener(new java.awt.event.ActionListener() {
+        editartestes.setFont(new java.awt.Font("Rockwell", 0, 18)); // NOI18N
+        editartestes.setText("editar testes ");
+        editartestes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editaridActionPerformed(evt);
+                editartestesActionPerformed(evt);
             }
         });
 
-        editdisc.setFont(new java.awt.Font("Rockwell", 0, 18)); // NOI18N
-        editdisc.setText("editar testes de discriminacao ");
-        editdisc.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editdiscActionPerformed(evt);
-            }
-        });
-
-        jButton1.setText("salvar teste");
+        jButton1.setText("exportar teste");
 
         jButton2.setText("importar teste");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -84,22 +75,21 @@ public static configtestes app = null;
                 .addContainerGap(173, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(editarid, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(configgeral, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(editdisc)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(editartestes, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(17, 17, 17)))
                 .addGap(164, 164, 164))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(115, 115, 115)
+                .addGap(135, 135, 135)
                 .addComponent(configgeral, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
-                .addComponent(editdisc, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(editarid, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(39, 39, 39)
+                .addGap(38, 38, 38)
+                .addComponent(editartestes, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(68, 68, 68)
                 .addComponent(jButton1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton2)
@@ -118,21 +108,14 @@ public static configtestes app = null;
         
     }//GEN-LAST:event_configgeralActionPerformed
 
-    private void editaridActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editaridActionPerformed
-        configtesteid config = new configtesteid();
-        config.setLocationRelativeTo(null);
-        config.setVisible(true);
-
-    }//GEN-LAST:event_editaridActionPerformed
-
-    private void editdiscActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editdiscActionPerformed
+    private void editartestesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editartestesActionPerformed
         // TODO add your handling code here:
+        editartestes teste = new editartestes();
+        teste.setLocationRelativeTo(null);
+        teste.setVisible(true);
+       
         
-        configtestedisc config = new configtestedisc();
-        config.setLocationRelativeTo(null);
-        config.setVisible(true);
-        
-    }//GEN-LAST:event_editdiscActionPerformed
+    }//GEN-LAST:event_editartestesActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         
@@ -201,8 +184,7 @@ public static configtestes app = null;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup bgaluno;
     private javax.swing.JButton configgeral;
-    private javax.swing.JButton editarid;
-    private javax.swing.JButton editdisc;
+    private javax.swing.JButton editartestes;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     // End of variables declaration//GEN-END:variables

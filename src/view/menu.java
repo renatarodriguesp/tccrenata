@@ -60,6 +60,11 @@ public class menu extends javax.swing.JFrame {
         });
 
         jButton3.setText("sobre este software");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton2.setBackground(new java.awt.Color(244, 242, 232));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/toque.png"))); // NOI18N
@@ -121,6 +126,10 @@ public class menu extends javax.swing.JFrame {
         testes.setVisible(true);
         // essa janela precisa ser fixa
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
