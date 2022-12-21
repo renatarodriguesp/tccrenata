@@ -73,13 +73,12 @@ public static configtestes app = null;
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(173, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(configgeral, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(editartestes, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(17, 17, 17)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(editartestes, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(configgeral, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(164, 164, 164))
         );
         layout.setVerticalGroup(
@@ -124,62 +123,7 @@ public static configtestes app = null;
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-      try {
-            //for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-               // if ("Nimbus".equals(info.getName())) {
-                    //javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                  //  break;
-               // }
-                // set your theme
-                 Properties props = new Properties();
-            
-            props.put("logoString", "my company"); 
-            props.put("licenseKey", "INSERT YOUR LICENSE KEY HERE");
-            
-            props.put("selectionBackgroundColor", "180 240 197"); 
-            props.put("menuSelectionBackgroundColor", "180 240 197"); 
-            
-            props.put("controlColor", "218 254 230");
-            props.put("controlColorLight", "218 254 230");
-            props.put("controlColorDark", "180 240 197"); 
-
-            props.put("buttonColor", "218 230 254");
-            props.put("buttonColorLight", "255 255 255");
-            props.put("buttonColorDark", "244 242 232");
-
-            props.put("rolloverColor", "218 254 230"); 
-            props.put("rolloverColorLight", "218 254 230"); 
-            props.put("rolloverColorDark", "180 240 197"); 
-
-            props.put("windowTitleForegroundColor", "0 0 0");
-            props.put("windowTitleBackgroundColor", "180 240 197"); 
-            props.put("windowTitleColorLight", "218 254 230"); 
-            props.put("windowTitleColorDark", "180 240 197"); 
-            props.put("windowBorderColor", "218 254 230");
-            
-            SmartLookAndFeel.setCurrentTheme(props);
-            // select the Look and Feel
-            UIManager.setLookAndFeel("com.jtattoo.plaf.smart.SmartLookAndFeel");
-
-            app = new configtestes();
-            
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new configtestes().setVisible(true);
-               // configtestes.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-            }
-        });
-    }
+   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup bgaluno;
