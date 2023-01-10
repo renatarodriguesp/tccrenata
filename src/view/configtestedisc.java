@@ -31,6 +31,7 @@ public class configtestedisc extends javax.swing.JFrame {
         audiodisc = new javax.swing.JButton();
         igual = new javax.swing.JButton();
         diferente = new javax.swing.JButton();
+        jbmenu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -43,6 +44,19 @@ public class configtestedisc extends javax.swing.JFrame {
         igual.setText("igual");
 
         diferente.setText("diferente");
+
+        jbmenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/casa.png"))); // NOI18N
+        jbmenu.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jbmenu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jbmenuMouseReleased(evt);
+            }
+        });
+        jbmenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbmenuActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -62,15 +76,19 @@ public class configtestedisc extends javax.swing.JFrame {
                         .addGap(41, 41, 41)
                         .addComponent(audiodisc))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(291, 291, 291)
+                        .addGap(25, 25, 25)
+                        .addComponent(jbmenu, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(146, 146, 146)
                         .addComponent(jLabel1)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbmenu, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(audiodisc, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -81,8 +99,22 @@ public class configtestedisc extends javax.swing.JFrame {
                 .addGap(0, 152, Short.MAX_VALUE))
         );
 
+        jbmenu.getAccessibleContext().setAccessibleDescription("menu");
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jbmenuMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbmenuMouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbmenuMouseReleased
+
+    private void jbmenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbmenuActionPerformed
+        // TODO add your handling code here:
+        menu menu = new menu();
+        menu.setLocationRelativeTo(null);
+        menu.setVisible(true);
+        
+    }//GEN-LAST:event_jbmenuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -94,5 +126,6 @@ public class configtestedisc extends javax.swing.JFrame {
     private javax.swing.JButton igual;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton jbmenu;
     // End of variables declaration//GEN-END:variables
 }
